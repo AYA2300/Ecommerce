@@ -6,9 +6,9 @@
 	<title>@yield('pageTitle')</title>
 
 	<!-- Site favicon -->
-	<link rel="apple-touch-icon" sizes="180x180" href="back/vendors/images/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="back/vendors/images/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="back/vendors/images/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/back/vendors/images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/back/vendors/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/back/vendors/images/favicon-16x16.png">
 
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -16,18 +16,18 @@
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="back/vendors/styles/core.css">
-	<link rel="stylesheet" type="text/css" href="back/vendors/styles/icon-font.min.css">
-	<link rel="stylesheet" type="text/css" href="back/vendors/styles/style.css">
+	<link rel="stylesheet" type="text/css" href="/back/vendors/styles/core.css">
+	<link rel="stylesheet" type="text/css" href="/back/vendors/styles/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="/back/vendors/styles/style.css">
 
-    @stack('stylesheet')
+    @stack('stylesheets')
 </head>
 <body class="login-page">
 	<div class="login-header box-shadow">
 		<div class="container-fluid d-flex justify-content-between align-items-center">
 			<div class="brand-logo">
 				<a href="login.html">
-					<img src="back/vendors/images/deskapp-logo.svg" alt="">
+					<img src="/back/vendors/images/deskapp-logo.svg" alt="">
 				</a>
 			</div>
 			<div class="login-menu">
@@ -41,9 +41,10 @@
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-md-6 col-lg-7">
-					<img src="back/vendors/images/login-page-img.png" alt="">
+					<img src="/back/vendors/images/login-page-img.png" alt="">
 				</div>
 				<div class="col-md-6 col-lg-5">
+                     @yield('content')
 					{{-- <div class="login-box bg-white box-shadow border-radius-10">
 						<div class="login-title">
 							<h2 class="text-center text-primary">Login To DeskApp</h2>
@@ -53,13 +54,13 @@
 								<div class="btn-group btn-group-toggle" data-toggle="buttons">
 									<label class="btn active">
 										<input type="radio" name="options" id="admin">
-										<div class="icon"><img src="back/vendors/images/briefcase.svg" class="svg" alt=""></div>
+										<div class="icon"><img src="/back/vendors/images/briefcase.svg" class="svg" alt=""></div>
 										<span>I'm</span>
 										Manager
 									</label>
 									<label class="btn">
 										<input type="radio" name="options" id="user">
-										<div class="icon"><img src="back/vendors/images/person.svg" class="svg" alt=""></div>
+										<div class="icon"><img src="/back/vendors/images/person.svg" class="svg" alt=""></div>
 										<span>I'm</span>
 										Employee
 									</label>
@@ -105,16 +106,16 @@
 							</div>
 						</form>
 					</div> --}}
-                    @yield('content')
+
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- js -->
-	<script src="back/vendors/scripts/core.js"></script>
-	<script src="back/vendors/scripts/script.min.js"></script>
-	<script src="back/vendors/scripts/process.js"></script>
-	<script src="back/vendors/scripts/layout-settings.js"></script>
+	<script src="/back/vendors/scripts/core.js"></script>
+	<script src="/back/vendors/scripts/script.min.js"></script>
+	<script src="/back/vendors/scripts/process.js"></script>
+	<script src="/back/vendors/scripts/layout-settings.js"></script>
 
     @stack('scripts')
 </body>

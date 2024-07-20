@@ -21,7 +21,7 @@
 	<link rel="stylesheet" type="text/css" href="back/vendors/styles/style.css">
 
 
-@stack('stylesheets')
+@stack('stylesheet')
 </head>
 <body>
 	{{-- <div class="pre-loader">
